@@ -1,0 +1,23 @@
+<p-card header="Lista de Alunos">
+  <div class="flex flex-wrap col-12 mb-3">
+    <p-button icon="pi pi-plus" routerLink="cadastro" label="Novo"></p-button>
+  </div>
+  
+  <p-table [value]="alunos" styleClass="p-datatable-striped">
+    <ng-template pTemplate="header">
+      <tr>
+        <th width="150px">ID</th>
+        <th width="300px">Nome</th>
+        <th width="200px">CPF</th>
+      </tr>
+    </ng-template>
+    
+    <ng-template pTemplate="body" let-aluno>
+      <tr>
+        <td>{{ aluno.id }}</td>
+        <td>{{ aluno.nome }}</td>
+        <td>{{ aluno.cpf }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>

@@ -1,5 +1,5 @@
 export class aluno {
-    idaluno?:number;
+    id?:number;
     cpf?: string;
     nome?: string;
     descricao?: string;
@@ -8,4 +8,5 @@ export class aluno {
     dataalteracao?: Date;
     usuariocriacao?: string;
     usuarioalteracao?: string;
+  static id: number;
 }

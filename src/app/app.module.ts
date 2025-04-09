@@ -8,9 +8,12 @@ import { PrimengModule } from './primeng.module';
 import {TableModule} from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
+import { DisciplinaModule} from './pages/disciplinas/disciplina.module';
+import{AlunosModule}from './pages/alunos/alunos.module';
 @NgModule({
   declarations: [
     AppComponent
+
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,9 @@ import { CardModule } from 'primeng/card';
     PrimengModule,
     TableModule,
     FormsModule,
-    CardModule
+    CardModule,
+    AlunosModule,
+    DisciplinaModule
   ],
   providers: [
   ],
