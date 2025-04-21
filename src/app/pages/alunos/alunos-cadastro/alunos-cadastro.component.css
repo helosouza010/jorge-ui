@@ -1,0 +1,12 @@
+.center-container {
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
+  height: 100vh;   
+           /* altura da tela toda */
+  background-image: url("src/assets/imagens/404810acbf8bec36ce05f906e893f026.jpg");
+  background-image: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+   
