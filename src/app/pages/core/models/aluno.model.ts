@@ -3,7 +3,7 @@ export class aluno {
     cpf?: string;
     nome?: string;
     descricao?: string;
-    status?: boolean;
+    status?: string;
     datacriacao?: Date;
     dataalteracao?: Date;
     usuariocriacao?: string;

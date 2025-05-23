@@ -20,4 +20,29 @@ export class AlunoService {
     novoAluno.id = novoId;
     this.alunos.push(novoAluno);
   }
+
+//Método para bsucar aluno por id
+buscarPorId(id: number): Promise<aluno | undefined> {
+  return new Promise((resolve, reject) => {
+    const alunoEncontrado = this.alunos.find(aluno => aluno.id === id);
+    if (alunoEncontrado) {
+      resolve(alunoEncontrado);
+    } else {
+      reject('Aluno não encontrado');
+    }
+  });
+
+}
+  //Método para editar aluno
+  editarAluno(alunoEditado: aluno): void {
+    const index = this.alunos.findIndex(a => a.id === alunoEditado.id);
+    if (index !== -1) {
+      this.alunos[index] = alunoEditado;
+    }
+  }
+
+  //Método para deletar aluno
+  deletarAluno(id: number): void {
+    this.alunos = this.alunos.filter(aluno => aluno.id !== id);
+  }
 }

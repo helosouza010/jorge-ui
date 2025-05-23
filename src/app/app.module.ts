@@ -6,10 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrimengModule } from './primeng.module';
 import {TableModule} from 'primeng/table';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';import { ReactiveFormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
-import { DisciplinaModule} from './pages/disciplinas/disciplina.module';
 import{AlunosModule}from './pages/alunos/alunos.module';
+import { DropdownModule } from 'primeng/dropdown';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
+import {NgxSpinnerModule} from 'ngx-spinner';
+import { MessageService } from 'primeng/api';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -25,10 +30,14 @@ import{AlunosModule}from './pages/alunos/alunos.module';
     FormsModule,
     CardModule,
     AlunosModule,
-    DisciplinaModule
+    DropdownModule,
+    ButtonModule,
+    InputTextModule,
+    NgxSpinnerModule,
+    ReactiveFormsModule
+    
   ],
-  providers: [
-  ],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

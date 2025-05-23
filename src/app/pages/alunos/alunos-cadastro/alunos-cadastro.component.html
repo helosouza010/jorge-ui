@@ -1,24 +1,34 @@
 <div class="center-container">
 
-<p-card header="Cadastro de Aluno">
-  <div class="flex flex-wrap col-12 mb-3">
-    <button
-      pButton
-      type="button"
-      class="p-button p-button-raised"
-      icon="pi pi-caret-left"
-      pTooltip="Voltar"
-      tooltipPosition="top"
-      label="Voltar"
-      routerLink="/alunos">
-    </button>
-  </div>
+  <p-card>
+
+    <ng-template pTemplate="header">
+      <div class="card-header-custom">
+        Cadastro de Aluno
+      </div>
+    </ng-template>
 
   <form #form="ngForm" autocomplete="off" (ngSubmit)="cadastrarAluno(form)">
-    <div class="grid">
-      <span class="col-12 -mb-3">Nome</span>
+
+      <div class="flex flex-wrap col-12 mb-3">
+        <button
+          pButton
+          type="button"
+          class="p-button p-button-raised"
+          icon="pi pi-caret-left"
+          pTooltip="Voltar"
+          tooltipPosition="top"
+          label="Voltar"
+          routerLink="/alunos">
+        </button>
+      </div>
+
+
+    <div class="grid justify-content-center">
+      <span class="col-12 -mb-3 text-center">Nome</span>
       <div class="col-12 md:col-6 lg:col-4">
         <input
+          
           pInputText
           name="nome"
           #nome="ngModel"
@@ -27,10 +37,10 @@
           required>
       </div>
 
-      <span class="col-12 -mb-3">CPF</span>
+      <span class="col-12 -mb-3 text-center">CPF</span>
       <div class="col-12 md:col-6 lg:col-4">
-        <input
-          pInputText
+        <input 
+          pInputtext
           name="cpf"
           #cpf="ngModel"
           [(ngModel)]="alunos.cpf"
@@ -38,7 +48,7 @@
           required>
       </div>
 
-      <div class="col-12 mt-4">
+      <div class="col-12 mt-4 flex justify-content-center">
         <button
           pButton
           type="submit"
@@ -46,7 +56,22 @@
           [disabled]="form.invalid">
         </button>
       </div>
-    </div>
-  </form>
-</p-card>
-</div>
+<!-- app.component.html -->
+
+
+
+
+    <div *ngIf="loading" class="grid justify-content-center mt-2">
+      <div class="grid col-12 justify-content-center">
+        <p-progressSpinner [style]="{ width: '50px', height: '50px' }" styleClass="custom-spinner" strokeWidth="5"
+          animationDuration=".5s">
+        </p-progressSpinner>
+      </div>
+      <div class="grid col-12 justify-content-center">
+        <span class="text-center">Aguarde, salvando...</span>
+      </div>
+   
+  
+  </div>
+
+

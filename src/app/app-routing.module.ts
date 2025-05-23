@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'disciplinas',
-    loadChildren: () =>
-      import('./pages/disciplinas/disciplina.module').then((m) => m.DisciplinaModule)
-  },
+{
+  path:'',
+  redirectTo: 'alunos',
+  pathMatch: 'full'
+},
   {
     path: 'alunos',
     loadChildren: () =>

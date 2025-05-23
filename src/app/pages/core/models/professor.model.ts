@@ -1,11 +1,12 @@
 export class professor {
-    idprofessor?:number;
+    id?:number;
     cpf?: string;
     nome?: string;
     descricao?: string;
-    status?: boolean;
+    status?: string;
     datacriacao?: Date;
     dataalteracao?: Date;
     usuariocriacao?: string;
     usuarioalteracao?: string;
+    static id: number;
 }
