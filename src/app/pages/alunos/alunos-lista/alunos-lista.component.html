@@ -31,10 +31,37 @@
   </p-table>
 
 
-<p-sidebar [(visible)]="display" position="left">
-    Content
+
+
+
+<p-sidebar [(visible)]="display" position="top" styleClass="custom-sidebar-top"  [modal]="false" 
+  [showCloseIcon]="false" 
+  [baseZIndex]="10000" >
+
+    <div class="flex align-items-center justify-content-between w-full">
+    <div class="flex align-items-center gap-3">
+      <i class="pi pi-home text-white text-2xl"></i>
+      <span class="text-white font-bold text-xl">Menu</span>
+    </div>
+  
+  <div class="flex gap-3">
+    <p-button label="Dashboard" icon="pi pi-home" styleClass="p-button-text"></p-button>
+    <p-button label="Alunos" icon="pi pi-users" styleClass="p-button-text"></p-button>
+    <p-button label="Configurações" icon="pi pi-cog" styleClass="p-button-text"></p-button>
+    <p-button label="Sair" icon="pi pi-sign-out" severity="danger"></p-button>
+  </div>
+</div>
+
 </p-sidebar>
-<p-button type="text" (click)="display = true" icon="pi pi-plus" label="Show"></p-button>
+<p-button type="text" (click)="display = true" icon="pi pi-bars" label="Menu"></p-button>
+
+<p-button 
+  icon="pi pi-times" 
+  styleClass="p-button-text p-button-plain text-white" 
+  (click)="display = false"
+  aria-label="Fechar menu"
+></p-button>
+
 
 
 </p-card>

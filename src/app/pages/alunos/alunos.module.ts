@@ -9,6 +9,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {ReactiveFormsModule} from '@angular/forms';
 import{SharedModule} from 'src/app/shared/shared.module';
 import {SidebarModule} from 'primeng/sidebar';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+
 @NgModule({
   declarations: [
     AlunosListaComponent,
@@ -22,7 +25,10 @@ import {SidebarModule} from 'primeng/sidebar';
     ProgressSpinnerModule,
     ReactiveFormsModule,
     SharedModule,
-    SidebarModule
+    SidebarModule,
+    MessagesModule,
+    MessageModule
+
   ]
 })
 export class AlunosModule {}
