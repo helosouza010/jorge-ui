@@ -1,6 +1,7 @@
 <p-card header="Lista de Alunos">
-  <div class="flex flex-wrap col-12 mb-3">
+  <div class="flex flex-wrap col-12 mb-3 mr-3 justify-content-between">
     <p-button icon="pi pi-plus" routerLink="cadastro" label="Novo"></p-button>
+    <p-button type="text" (click)="display = true" icon="pi pi-bars" label="Menu"></p-button>
   </div>
 
   <p-table [value]="alunos" styleClass="p-datatable-striped">
@@ -44,23 +45,20 @@
       <span class="text-white font-bold text-xl">Menu</span>
     </div>
   
+    
   <div class="flex gap-3">
     <p-button label="Dashboard" icon="pi pi-home" styleClass="p-button-text"></p-button>
     <p-button label="Alunos" icon="pi pi-users" styleClass="p-button-text"></p-button>
     <p-button label="Configurações" icon="pi pi-cog" styleClass="p-button-text"></p-button>
-    <p-button label="Sair" icon="pi pi-sign-out" severity="danger"></p-button>
+    <p-button label="Sair" icon="pi pi-sign-out" severity="danger" (click)="display=false" ></p-button>
+   
   </div>
 </div>
 
 </p-sidebar>
-<p-button type="text" (click)="display = true" icon="pi pi-bars" label="Menu"></p-button>
 
-<p-button 
-  icon="pi pi-times" 
-  styleClass="p-button-text p-button-plain text-white" 
-  (click)="display = false"
-  aria-label="Fechar menu"
-></p-button>
+
+
 
 
 
