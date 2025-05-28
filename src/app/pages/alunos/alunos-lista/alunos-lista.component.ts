@@ -1,7 +1,9 @@
+import {AlunoService} from '../alunos.service';
 import { Component, OnInit } from '@angular/core';
 import { aluno } from '../../core/models/aluno.model';
 import { alunosMock} from 'src/app/pages/alunos/alunos.mock'; // <- Importando os dados mockados
 import {NgxSpinnerService} from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-alunos-lista',
@@ -12,9 +14,13 @@ export class AlunosListaComponent implements OnInit {
 
   alunos: aluno[] = [];
   loading = true;
+  display: boolean=false;
 
 
-  constructor(private spinner: NgxSpinnerService) {}
+  constructor(
+              private spinner: NgxSpinnerService,
+              private alunoService: AlunoService
+  ) {}
 
   statusOptions = [
     { name: 'Cursando' },
@@ -39,15 +45,16 @@ export class AlunosListaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.spinner.show(); 
+    this.spinner.show();
+    this.loading = true;
 
-    setTimeout(() => {
+    this.alunoService.aluno$.subscribe((alunos: aluno[])=> {
       this.loading = false;
-      this.alunos = alunosMock;
+      this.alunos=alunos;
       this.spinner.hide();
-    }, 1500);
-    
+    });
 
-  
+
+
   }
 }

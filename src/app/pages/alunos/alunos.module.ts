@@ -7,6 +7,8 @@ import { AlunosCadastroComponent } from './alunos-cadastro/alunos-cadastro.compo
 import { PrimengModule } from 'src/app/primeng.module';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {ReactiveFormsModule} from '@angular/forms';
+import{SharedModule} from 'src/app/shared/shared.module';
+import {SidebarModule} from 'primeng/sidebar';
 @NgModule({
   declarations: [
     AlunosListaComponent,
@@ -18,7 +20,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     AlunosRoutingModule,
     PrimengModule,
     ProgressSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
+    SidebarModule
   ]
 })
 export class AlunosModule {}

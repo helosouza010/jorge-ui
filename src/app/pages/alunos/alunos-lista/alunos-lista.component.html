@@ -19,8 +19,8 @@
         <td>{{ aluno.nome }}</td>
         <td>{{ aluno.cpf }}</td>
         <td>
-          <p-dropdown 
-            [options]="statusOptions" 
+          <p-dropdown
+            [options]="statusOptions"
             [(ngModel)]="aluno.status"
             optionLabel="name"
             placeholder="Selecione um status">
@@ -29,4 +29,12 @@
       </tr>
     </ng-template>
   </p-table>
+
+
+<p-sidebar [(visible)]="display" position="left">
+    Content
+</p-sidebar>
+<p-button type="text" (click)="display = true" icon="pi pi-plus" label="Show"></p-button>
+
+
 </p-card>

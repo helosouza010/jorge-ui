@@ -14,7 +14,8 @@ import { MessageService } from 'primeng/api';
 })
 export class AlunosCadastroComponent implements OnInit {
 
-  loading: boolean = false;
+ loading:boolean=true;
+
   alunos = new aluno();
   iddisc: number | undefined;
   form!: FormGroup;
@@ -41,12 +42,19 @@ export class AlunosCadastroComponent implements OnInit {
   ngOnInit(): void {
     this.iddisc = this.route.snapshot.params['id'];
     this.title.setTitle('Cadastro de Aluno');
+    
 
+    //Mostra o loading para abrir a tela
+    this.spinner.show();
+    setTimeout(()=> {
     this.form=this.fb.group({
       nome:['', Validators.required],
       cpf: ['',[Validators.required, Validators.required, Validators.pattern('[0-9]{11}')]],
       status: ['',Validators.required]
     });
+    this.loading=false;
+    this.spinner.hide();
+  },1000);//simula carregamento, e esse 1000 e para o tempo de caregamento do loading
   }
 
 
@@ -59,7 +67,7 @@ cadastrarAluno(form: NgForm) {
 
   salvar(): void {
     if (this.form.invalid) return;
-
+    this.loading=true;
     this.spinner.show();
 
     setTimeout(() => {
@@ -69,6 +77,7 @@ cadastrarAluno(form: NgForm) {
         detail:'Aluno salvou com muitissimo sucesso'
       })
 
+      this.loading=false;
       this.spinner.hide();
       this.router.navigate(['/alunos']);
     }, 1500);
