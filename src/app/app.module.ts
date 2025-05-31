@@ -14,6 +14,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import { MessageService } from 'primeng/api';
+import {ProfessorModule} from './pages/professor/professor.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MessageService } from 'primeng/api';
     ButtonModule,
     InputTextModule,
     NgxSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ProfessorModule
     
   ],
   providers: [MessageService],
