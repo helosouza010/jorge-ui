@@ -9,8 +9,8 @@ import { professorMock } from './professor.mock';
 
 
 export class ProfessorService {
-  professor$: any;
-  // Aqui você pode implementar os métodos necessários para gerenciar os professores,Por exemplo, adicionar, editar, deletar e buscar professores
+  professor$: BehaviorSubject<professor[]> = new BehaviorSubject<professor[]>(professorMock.filter(p => p && p.nome && p.cpf));
+  // O BehaviorSubject é usado para manter o estado dos professores e permitir que os componentes se inscrevam para receber atualizações
   
   getProfessores(): any[] {
 

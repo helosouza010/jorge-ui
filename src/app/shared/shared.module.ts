@@ -1,22 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UppercasePipe } from './pipes/uppercase.pipe';
-import { AutoFocusDirective } from './directives/auto-focus.directive';
-
+import { MessageComponent } from './message.component';
 
 
 @NgModule({
   declarations: [
-    UppercasePipe,
-    AutoFocusDirective
+   MessageComponent
   ],
   imports: [
     CommonModule
   ],
  exports: [
-    UppercasePipe,
-    AutoFocusDirective,
-    CommonModule,
+  
+    MessageComponent
   ]
 })
 export class SharedModule { }

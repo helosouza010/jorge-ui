@@ -15,11 +15,12 @@ import {InputTextModule} from 'primeng/inputtext';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import { MessageService } from 'primeng/api';
 import {ProfessorModule} from './pages/professor/professor.module';
-
+import { ToastModule } from 'primeng/toast';
+import{OverlayPanelModule} from 'primeng/overlaypanel';
+import {CoreModule} from './pages/core/core.module';
 @NgModule({
   declarations: [
     AppComponent
-
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,10 @@ import {ProfessorModule} from './pages/professor/professor.module';
     InputTextModule,
     NgxSpinnerModule,
     ReactiveFormsModule,
-    ProfessorModule
+    ProfessorModule,
+    ToastModule,
+    OverlayPanelModule,
+    CoreModule
     
   ],
   providers: [MessageService],

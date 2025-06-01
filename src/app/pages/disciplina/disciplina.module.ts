@@ -8,15 +8,14 @@ import{SharedModule} from 'src/app/shared/shared.module';
 import {SidebarModule} from 'primeng/sidebar';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
-import { ProfessorCadastroComponent } from './professor-cadastro/professor-cadastro.component';
-import { ProfessorListaComponent } from './professor-lista/professor-lista.component';
-import { __classPrivateFieldGet } from 'tslib';
-import { ProfessorRoutingModule } from './professor.routing';
+import { DisciplinaCadastroComponent } from './disciplina-cadastro/disciplina-cadastro.component';
+import { DisciplinaListaComponent } from './disciplina-lista/disciplina-lista.component';
+import { DisciplinaRoutingModule } from './disciplina.routing';
 
 @NgModule({
   declarations: [
-    ProfessorCadastroComponent,
-    ProfessorListaComponent
+    DisciplinaCadastroComponent,
+    DisciplinaListaComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +27,8 @@ import { ProfessorRoutingModule } from './professor.routing';
     SidebarModule,
     MessagesModule,
     MessageModule,
-    ProfessorRoutingModule
+    DisciplinaRoutingModule
   ],
 })
-export class ProfessorModule {}
+export class DisciplinaModule { }
+// This module defines the DisciplinaModule which includes components for managing "Disciplina" entities.
