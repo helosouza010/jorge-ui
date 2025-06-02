@@ -20,6 +20,14 @@ export class ProfessorListaComponent implements OnInit {
     private spinner: NgxSpinnerService,
     private professorService: ProfessorService
   ) {}
+  statusOptions = [
+    { name: 'Ativo' },
+    { name: 'Inativo' },
+    { name: 'Afastado' },
+    { name: 'Licença' },
+    { name: 'Aposentado' },
+    { name: 'Desligado' }
+  ];
 
   ngOnInit():void {
     this.spinner.show();

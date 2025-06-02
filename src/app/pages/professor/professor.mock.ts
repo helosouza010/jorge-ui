@@ -19,8 +19,9 @@ id: 2,
 id: 3,
   nome: 'Carlos',
   cpf: '456.789.123-00',
+  status:'ativo',
   descricao: 'Professor de Ciências',
-  status: 'ativo',
+  
   },
   {
 id: 4,

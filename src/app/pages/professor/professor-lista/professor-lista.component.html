@@ -10,8 +10,8 @@
         <th width="150px">ID</th>
         <th width="300px">Nome</th>
         <th width="200px">CPF</th>
-        <th width="100px">Status</th>
         <th width="100px">Descricao</th>
+        <th width="100px">Status</th>
       </tr>
     </ng-template>
 
@@ -23,7 +23,7 @@
         <td>{{professor.descricao}}</td>
         <td>
           <p-dropdown
-           
+            [options]="statusOptions"
             [(ngModel)]="professor.status"
             optionLabel="name"
             placeholder="Selecione um status">
