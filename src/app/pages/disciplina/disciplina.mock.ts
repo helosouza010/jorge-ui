@@ -2,34 +2,32 @@ export const disciplinaMock = [
   {},
   {
     id: 1,
-    descricao: 'Disciplina de Matemática',
-    status: 'ativo',
+    nome: 'Matemática',
+    cargahoraria:'40',
+
   },
   {
     id: 2,
-    descricao: 'Disciplina de História',
-    status: 'ativo',
+    nome: 'Português',
+    cargahoraria:'40',
   },
   {
     id: 3,
-    descricao: 'Disciplina de Ciências',
-    status: 'ativo',
+    nome: 'História',
+    cargahoraria:'40',
   },
   {
     id: 4,
-    descricao: 'Disciplina de Geografia',
-    status: 'ativo',
+    nome: 'Geografia',
+    cargahoraria:'40',
   },
   {
     id: 5,
-    descricao: 'Disciplina de Língua Portuguesa',
-    status: 'ativo',
+    nome: 'Ciências',
+    cargahoraria:'40',
   },
-  {
-    id: 6,
-    descricao: 'Disciplina de Educação Física',
-    status: 'ativo',
-  }
+  
+  
 
 
 

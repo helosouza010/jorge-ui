@@ -1,0 +1,53 @@
+.center-container {
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
+  height: 100vh;
+           /* altura da tela toda */
+  
+ 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;                  /* garante altura da tela toda */
+  margin: 0;                /* remove margens */
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+}
+
+.card-header-custom{
+  background-color: rgb(15, 59, 141); 
+text-align: center;
+font-weight: constantia;
+font-size: 1.7rem;
+font-weight: normal;
+  color: white;  /* Adiciona a cor branca para o texto */
+}
+
+::ng-deep .p-card{
+  background-color: rgba(64, 252, 211, 0.5); 
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 255, 221, 0.5);
+  font-weight: normal;
+  color: rgb(135, 72, 155);  
+}
+
+input{
+  color: rgb(104, 233, 104);
+  background-color:rgba(27, 27, 29, 0.705);
+}
+
+/* Mudando a cor de fundo e texto do botão */
+button {
+  background-color: #356a8d;  /* Cor de fundo */
+  color: white;               /* Cor do texto */
+  border: none;               /* Remove a borda */
+  padding: 10px 20px;         /* Ajuste o padding conforme necessário */
+  font-size: 1rem;            /* Tamanho da fonte */
+  cursor: pointer;            /* Muda o cursor para uma mãozinha */
+}
+
+button:hover {
+  background-color: #81114f;  /* Cor de fundo ao passar o mouse */
+}
