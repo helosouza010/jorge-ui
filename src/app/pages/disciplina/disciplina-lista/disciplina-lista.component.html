@@ -1,4 +1,11 @@
 <p-card header="Lista de Disciplinas" class="mb-4">
+  
+<div class="flex flex-wrap col-12 mb-3 mr-3 justify-content-between">
+    <p-button icon="pi pi-plus" routerLink="cadastro" label="Novo"></p-button>
+    <p-button type="text" (click)="display = true" icon="pi pi-bars" label="Menu"></p-button>
+  </div>
+
+
   <p-table [value]="disciplinas" styleClass="p-datatable-striped">
     <ng-template pTemplate="header">
       <tr>
@@ -17,11 +24,12 @@
     </ng-template>
   </p-table>
 
-  <div class="flex justify-content-end mt-4">
-    <button pButton type="button" label="Novo" icon="pi pi-plus" routerLink="/disciplinas/cadastro"></button>
-  </div>
+
+
+  
+
+  
   <div class="flex flex-wrap col-12 mb-3 mr-3 justify-content-between">
-    <p-button type="text" (click)="display = true" icon="pi pi-bars" label="Menu"></p-button>
   </div>
   <p-sidebar [(visible)]="display" position="top" styleClass="custom-sidebar-top" [modal]="false"
     [showCloseIcon]="false" [baseZIndex]="10000">
@@ -41,17 +49,4 @@
     </div>
   </p-sidebar>
 </p-card>
-<div class="flex justify-content-end mt-4">
-  <button pButton type="button" label="Novo" icon="pi pi-plus" routerLink="/disciplinas/cadastro"></button>
-</div>
-<div class="flex flex-wrap col-12 mb-3 mr-3 justify-content-between">
-  <p-button type="text" (click)="display = true" icon="pi pi-bars" label="Menu"></p-button>
-</div>
-<p-sidebar [(visible)]="display" position="top" styleClass="custom-sidebar-top" [modal]="false"
-  [showCloseIcon]="false" [baseZIndex]="10000">
 
-  <div class="flex align-items-center justify-content-between w-full">
-    <div class="flex align-items-center gap-3">
-      <i class="pi pi-home text-white text-2xl"></i>
-      <span class="text-white font-bold text-xl">Menu</span>
-    </div>

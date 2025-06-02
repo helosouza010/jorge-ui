@@ -14,5 +14,19 @@ id: 2,
   cpf: '987.654.321-00',
   descricao: 'Professora de História',
   status: 'ativo',
+  },
+  {
+id: 3,
+  nome: 'Carlos',
+  cpf: '456.789.123-00',
+  descricao: 'Professor de Ciências',
+  status: 'ativo',
+  },
+  {
+id: 4,
+  nome: 'Armando',
+  cpf: '888.333.444.29',
+  descricao: 'Professor de ADS',
+  status:'ativo',
   }
 ]
