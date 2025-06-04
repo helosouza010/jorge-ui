@@ -40,7 +40,8 @@
       <span class="col-12 -mb-3 text-center">CPF</span>
       <div class="col-12 md:col-6 lg:col-4">
         <input 
-          pInputtext
+          pInputMask
+          mask="999.999.999-99"
           name="cpf"
           #cpf="ngModel"
           [(ngModel)]="alunos.cpf"

@@ -42,7 +42,7 @@ export class AlunosCadastroComponent implements OnInit {
   ngOnInit(): void {
     this.iddisc = this.route.snapshot.params['id'];
     this.title.setTitle('Cadastro de Aluno');
-    
+
 
     //Mostra o loading para abrir a tela
     this.spinner.show();
@@ -67,8 +67,22 @@ cadastrarAluno(form: NgForm) {
 
   salvar(): void {
     if (this.form.invalid) return;
+
+    const novoAluno:aluno={
+  id:undefined,
+  nome:this.form.value.nome,
+  cpf:this.form.value.cpf,
+  status:this.form.value.status
+};
+
+this.alunoService.adicionarAluno(novoAluno);
+
+
     this.loading=true;
     this.spinner.show();
+
+
+
 
     setTimeout(() => {
       this.messageService.add({
